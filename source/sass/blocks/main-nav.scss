@@ -1,0 +1,58 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__menu {
+  display: none;
+
+  &--active {
+    display: block;
+    padding-top: 30px;
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+
+  margin-bottom: 25px;
+  font-family: "Rubik";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.main-nav__item {
+  padding: 5px 0;
+}
+
+.main-nav__link {
+  color: $text-black;
+  text-decoration: none;
+}
+
+.main-nav__phone {
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $text-black;
+  text-decoration: none;
+}
+
+.main-nav__socials {
+  display: flex;
+}
+
+.main-nav__socials-link {
+  display: block;
+  margin-right: 20px;
+  width: 24px;
+  height: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

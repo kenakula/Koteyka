@@ -3,3 +3,12 @@
 @import "mixins";
 @import "global";
 @import "font-stylesheet";
+
+// index
+
+@import "blocks/button.scss";
+@import "blocks/wrapper";
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/toggler";
+@import "blocks/promo";

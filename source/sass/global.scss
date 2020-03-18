@@ -25,13 +25,13 @@ input[type="radio"].visually-hidden {
 
 body {
   position: relative;
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: $font-lato;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  background-color: #ffffff;
+  background-color: $white;
   overflow-x: hidden;
 }
 

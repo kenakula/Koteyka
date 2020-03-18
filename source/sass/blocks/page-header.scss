@@ -1,0 +1,11 @@
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 12px;
+  min-height: 62px;
+
+  &--expanded {
+    height: 100vh;
+    background-color: $yellow;
+  }
+}

@@ -1,0 +1,52 @@
+.promo {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  min-height: 457px;
+  background-color: $yellow;
+  background-image: url("../img/promo-mask-mobile.png"), url("../img/promo-cat-mobile.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.promo__inner {
+  text-align: center;
+}
+
+.promo__city {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $font-rubik-bold;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 52px;
+}
+
+.promo__text {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.promo__button {
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/icon-button-paw.svg");
+  }
+}

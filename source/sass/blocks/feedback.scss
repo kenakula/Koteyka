@@ -1,0 +1,65 @@
+.feedback {
+  position: relative;
+  padding-bottom: 70px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    right: 0;
+    display: block;
+    width: 100px;
+    height: 131px;
+    background-image: url("../../img/bg-paw-adv-mobile.svg");
+  }
+}
+
+.feedback__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $font-rubik-bold;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.feedback__list {
+  @include list-reset;
+}
+
+.feedback__item {
+  position: relative;
+  display: none;
+  padding: 25px;
+  padding-left: 56px;
+  border-radius: 15px;
+  background-color: $white;
+
+  &--active {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/quote-left.png");
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.feedback__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 140%;
+}
+
+.feedback__inner {
+  display: none;
+}

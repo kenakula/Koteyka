@@ -1,0 +1,33 @@
+.advantages {
+  position: relative;
+  padding-top: 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: block;
+    width: 100px;
+    height: 131px;
+    background-image: url("../../img/bg-paw-mobile.svg");
+  }
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $font-rubik-bold;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.advantages__card {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

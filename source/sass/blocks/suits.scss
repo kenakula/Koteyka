@@ -1,0 +1,30 @@
+.suits {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 70px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    display: block;
+    width: 150px;
+    height: 46px;
+    background-image: url("../../img/fish.svg");
+  }
+}
+
+.suits__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $font-rubik-bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.suits__wrapper {
+  position: relative;
+}

@@ -7,9 +7,30 @@
   width: 206px;
   min-height: 50px;
   border-radius: 30px;
-  background-color: $white;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
   text-align-last: left;
+  background-color: $white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/icon-button-paw.svg");
+  }
+
+  &--orange {
+    font-weight: 400;
+    color: $white;
+    background-color: $orange;
+
+    &::after {
+      background-image: url("../img/icon-button-orange-paw.svg");
+    }
+  }
 }

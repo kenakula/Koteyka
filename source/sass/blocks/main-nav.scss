@@ -41,18 +41,3 @@
   color: $text-black;
   text-decoration: none;
 }
-
-.main-nav__socials {
-  display: flex;
-}
-
-.main-nav__socials-link {
-  display: block;
-  margin-right: 20px;
-  width: 24px;
-  height: 24px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-}

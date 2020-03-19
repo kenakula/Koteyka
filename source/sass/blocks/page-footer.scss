@@ -1,0 +1,44 @@
+.page-footer__bottom {
+  padding-top: 30px;
+}
+
+.page-footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.page-footer__menu {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-light-grey;
+}
+
+.page-footer__item {
+  margin-bottom: 15px;
+  width: 50%;
+}
+
+.page-footer__link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: $text-black;
+  text-decoration: none;
+}
+
+.page-footer__copyrights {
+  padding: 20px 0;
+  color: $text-grey;
+
+  p {
+    margin: 0;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

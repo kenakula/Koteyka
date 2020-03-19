@@ -1,0 +1,48 @@
+.card {
+  position: relative;
+  padding: 25px;
+  padding-top: 110px;
+  border-radius: 15px;
+  background-color: $white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icon-temp.png");
+    background-size: contain;
+  }
+
+  &--camera::before {
+    background-image: url("../img/icon-camera.png");
+  }
+  &--taxi::before {
+    background-image: url("../img/icon-taxi.png");
+  }
+  &--food::before {
+    background-image: url("../img/icon-food.png");
+  }
+  &--walk::before {
+    background-image: url("../img/icon-walk.png");
+  }
+  &--vet::before {
+    background-image: url("../img/icon-vet.png");
+  }
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: $font-rubik;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 140%;
+}

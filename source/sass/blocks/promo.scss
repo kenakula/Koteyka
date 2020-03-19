@@ -6,7 +6,7 @@
   background-color: $yellow;
   background-image: url("../img/promo-mask-mobile.png"), url("../img/promo-cat-mobile.png");
   background-size: cover;
-  background-position: center center;
+  background-position: bottom center;
   background-repeat: no-repeat;
 }
 
@@ -38,15 +38,4 @@
 
 .promo__button {
   margin: 0 auto;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 7px;
-    right: 7px;
-    display: block;
-    width: 36px;
-    height: 36px;
-    background-image: url("../img/icon-button-paw.svg");
-  }
 }

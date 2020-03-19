@@ -1,0 +1,45 @@
+.furniture {
+  display: flex;
+}
+
+.furniture__list {
+  @include list-reset;
+
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  padding-bottom: 2px;
+}
+
+.furniture__item {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--none {
+    background-image: url("../../img/icon-furniture-none.svg");
+  }
+
+  &--bed {
+    background-image: url("../../img/icon-furniture-bed.svg");
+  }
+
+  &--pole {
+    background-image: url("../../img/icon-furniture-pole.svg");
+  }
+
+  &--ball {
+    background-image: url("../../img/icon-furniture-ball.svg");
+  }
+
+  &--house {
+    background-image: url("../../img/icon-furniture-house.svg");
+  }
+}

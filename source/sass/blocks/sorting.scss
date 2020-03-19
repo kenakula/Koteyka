@@ -1,0 +1,16 @@
+.sorting__toggler {
+  position: relative;
+  padding-right: 35px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 12px;
+    height: 12px;
+    background-image: url("../img/sorting-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

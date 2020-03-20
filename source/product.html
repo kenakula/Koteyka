@@ -166,6 +166,39 @@
       </div>
     </div>
   </footer>
+  <section class="booking popup">
+    <form class="booking__form" action="#" method="POST">
+      <button class="popup__close">Закрыть окно</button>
+      <h2 class="booking__title">Забронировать номер</h2>
+      <fieldset class="booking__field booking__field--data">
+        <h3 class="visually-hidden">Введите ваши данные, и котика</h3>
+        <input class="booking__input booking__input--data" type="text" placeholder="Ваше имя">
+        <input class="booking__input booking__input--data" type="text" placeholder="Имя Питомца">
+        <input class="booking__input booking__input--data" type="tel" placeholder="Телефон">
+        <input class="booking__input booking__input--data" type="email" placeholder="E-mail">
+      </fieldset>
+      <fieldset class="booking__field booking__field--checkin">
+        <h3 class="booking__legend">Дата заезда</h3>
+        <div class="booking__inner">
+          <label for="checkin" class="booking__label">с</label>
+          <input class="booking__input booking__input--checkin" id="checkin" type="text" placeholder="26.01.2020">
+
+          <label for="checkout" class="booking__label">по</label>
+          <input class="booking__input booking__input--checkin" id="checkout" type="text" placeholder="26.02.2020">
+        </div>
+      </fieldset>
+      <button class="booking__button button button--orange">Отправить заявку</button>
+    </form>
+  </section>
+  <div class="success popup">
+    <div class="success__inner">
+      <h2 class="success__title">Спасибо за заявку</h2>
+      <p class="success__text">
+        Мы свяжемся с вами в ближайшее время
+      </p>
+      <button class="success__button button button--orange">Ок</button>
+    </div>
+  </div>
   <script src="js/menu.min.js"></script>
 </body>
 </html>

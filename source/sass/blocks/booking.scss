@@ -1,0 +1,82 @@
+.booking__form {
+  position: relative;
+  top: 100px;
+  margin: 0 auto;
+  padding: 60px 15px 40px;
+  margin-bottom: 100px;
+  width: 290px;
+  border-radius: 15px;
+  background-color: $white;
+  box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.25);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 71px;
+    height: 65px;
+    background-image: url("../../img/bg-paw-bookin-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.booking__title {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 200px;
+  font-family: $font-rubik-bold;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.booking__field {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+}
+
+.booking__input {
+  margin-bottom: 20px;
+  padding: 0 15px;
+  width: 100%;
+  height: 52px;
+  border: 1px solid $input-border-grey;
+  border-radius: 30px;
+
+  &--data {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--checkin {
+    width: 107px;
+    margin-bottom: 0;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.booking__legend {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.booking__button {
+  margin: 0 auto;
+  padding-left: 20px;
+}

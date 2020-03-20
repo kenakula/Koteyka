@@ -6,7 +6,7 @@
 
 // index
 
-@import "blocks/button.scss";
+@import "blocks/button";
 @import "blocks/wrapper";
 @import "blocks/socials";
 @import "blocks/page-header";
@@ -23,7 +23,10 @@
 // catalog
 
 @import "blocks/inner-page";
+@import "blocks/popup";
 @import "blocks/filter";
+@import "blocks/booking";
+@import "blocks/success";
 @import "blocks/sorting";
 @import "blocks/furniture";
 @import "blocks/catalog";

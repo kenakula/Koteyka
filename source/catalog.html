@@ -9,7 +9,7 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper wrapper">
-      <a href="#" class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         <img class="page-header__img" src="img/logo-mobile.svg" width="46" height="38" alt="Логотип котейки">
       </a>
       <nav class="main-nav">
@@ -47,12 +47,76 @@
       </nav>
     </div>
   </header>
-  <main class="inner-page wrapper">
+  <main class="inner-page inner-page--catalog wrapper">
     <h1 class="inner-page__title">Наши номера</h1>
     <div class="inner-page__inner">
       <button class="inner-page__button filter__toggler">Фильтры</button>
-      <button class="inner-page__button sorting__toggler">↑ По площади</button>
+      <div class="inner-page__sorting sorting">
+        <button class="inner-page__button sorting__toggler">↑ По площади</button>
+        <div class="sorting">
+          <ul class="sorting__list">
+            <li class="sorting__item sorting__item--ascending">↑ По площади</li>
+            <li class="sorting__item sorting__item--descending">↓ По площади</li>
+            <li class="sorting__item sorting__item--ascending">↑ По цене</li>
+            <li class="sorting__item sorting__item--descending">↓ По цене</li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <section class="filter popup popup--filter" id="filter">
+      <h2 class="visually-hidden">Фильтр объявлений</h2>
+      <form class="filter__form" action="#" method="POST" name="filter">
+        <button class="popup__close">Закрыть окно</button>
+        <fieldset class="filter__field filter__field--price">
+          <legend class="filter__legend filter__legend--price">Цена за сутки, ₽</legend>
+          <div class="filter__inner">
+            <input class="filter__input filter__input--price" id="min-price" type="text" placeholder="от 100">
+            <input class="filter__input filter__input--price" id="max-price" type="text" placeholder="до 600">
+          </div>
+        </fieldset>
+        <fieldset class="filter__field filter__field--space">
+          <legend class="filter__legend filter__legend--space">Площадь</legend>
+
+          <input class="filter__checkbox visually-hidden" id="space1" type="checkbox" checked>
+          <label class="filter__label filter__label--space" for="space1">0,63 м2</label>
+
+          <input class="filter__checkbox visually-hidden" id="space2" type="checkbox" checked>
+          <label class="filter__label filter__label--space" for="space2">0,90 м2</label>
+
+          <input class="filter__checkbox visually-hidden" id="space3" type="checkbox" checked>
+          <label class="filter__label filter__label--space" for="space3">1,13 м2</label>
+
+          <input class="filter__checkbox visually-hidden" id="space4" type="checkbox" checked>
+          <label class="filter__label filter__label--space" for="space4">1,56 м2</label>
+
+          <input class="filter__checkbox visually-hidden" id="space5" type="checkbox" checked>
+          <label class="filter__label filter__label--space" for="space5">2,56 м2</label>
+
+          <input class="filter__checkbox visually-hidden" id="space6" type="checkbox" checked>
+          <label class="filter__label filter__label--space" for="space6">2,88 м2</label>
+        </fieldset>
+        <fieldset class="filter__field filter__field--contents">
+          <legend class="filter__legend filter__legend--contents">Оснащение номера</legend>
+
+          <input class="filter__checkbox visually-hidden" id="empty" type="checkbox" checked>
+          <label class="filter__label filter__label--contents" for="empty">Пустой номер</label>
+
+          <input class="filter__checkbox visually-hidden" id="bed" type="checkbox" checked>
+          <label class="filter__label filter__label--contents" for="bed">Лежак</label>
+
+          <input class="filter__checkbox visually-hidden" id="pole" type="checkbox" checked>
+          <label class="filter__label filter__label--contents" for="pole">Когтеточка</label>
+
+          <input class="filter__checkbox visually-hidden" id="ball" type="checkbox" checked>
+          <label class="filter__label filter__label--contents" for="ball">Игровой-комплекс</label>
+
+          <input class="filter__checkbox visually-hidden" id="house" type="checkbox" checked>
+          <label class="filter__label filter__label--contents" for="house">Домик</label>
+        </fieldset>
+        <button class="filter__button filter__button--submit">Подобрать</button>
+        <button class="filter__button filter__button--reset">Сбросить фильтр</button>
+      </form>
+    </section>
     <section class="catalog">
       <h2 class="visually-hidden">Список номеров гостиницы</h2>
       <ul class="catalog__list">
@@ -293,6 +357,40 @@
       </div>
     </div>
   </footer>
+  <section class="booking popup popup--booking">
+    <form class="booking__form" action="#" method="POST">
+      <button class="popup__close">Закрыть окно</button>
+      <h2 class="booking__title">Забронировать номер</h2>
+      <fieldset class="booking__field booking__field--data">
+        <h3 class="visually-hidden">Введите ваши данные, и котика</h3>
+        <input class="booking__input booking__input--data" type="text" placeholder="Ваше имя">
+        <input class="booking__input booking__input--data" type="text" placeholder="Имя Питомца">
+        <input class="booking__input booking__input--data" type="tel" placeholder="Телефон">
+        <input class="booking__input booking__input--data" type="email" placeholder="E-mail">
+      </fieldset>
+      <fieldset class="booking__field booking__field--checkin">
+        <h3 class="booking__legend">Дата заезда</h3>
+        <div class="booking__inner">
+          <label for="checkin" class="booking__label">с</label>
+          <input class="booking__input booking__input--checkin" id="checkin" type="text" placeholder="26.01.2020">
+
+          <label for="checkout" class="booking__label">по</label>
+          <input class="booking__input booking__input--checkin" id="checkout" type="text" placeholder="26.02.2020">
+        </div>
+      </fieldset>
+      <button class="booking__button button button--orange">Отправить заявку</button>
+    </form>
+  </section>
+  <div class="success popup popup--success">
+    <div class="success__inner">
+      <h2 class="success__title">Спасибо за заявку</h2>
+      <p class="success__text">
+        Мы свяжемся с вами в ближайшее время
+      </p>
+      <button class="success__button button button--orange">Ок</button>
+    </div>
+  </div>
+
   <script src="js/menu.min.js"></script>
 </body>
 </html>

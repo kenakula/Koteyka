@@ -1,3 +1,25 @@
+.sorting {
+  position: relative;
+}
+
+.sorting__list {
+  @include list-reset;
+
+  position: absolute;
+  display: none;
+  top: -26px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.sorting__item {
+  padding-left: 20px;
+  height: 35px;
+  background-color: $white;
+  cursor: pointer;
+}
+
 .sorting__toggler {
   position: relative;
   padding-right: 35px;
@@ -7,7 +29,7 @@
     position: absolute;
     right: 12px;
     top: 12px;
-    width: 12px;
+    width: 15px;
     height: 12px;
     background-image: url("../img/sorting-arrow-down.svg");
     background-repeat: no-repeat;

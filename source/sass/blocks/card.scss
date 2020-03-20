@@ -14,22 +14,46 @@
     height: 60px;
     background-image: url("../img/icon-temp.png");
     background-size: contain;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/icon-temp-2x.png");
+    }
   }
 
   &--camera::before {
     background-image: url("../img/icon-camera.png");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/icon-camera-2x.png");
+    }
   }
   &--taxi::before {
     background-image: url("../img/icon-taxi.png");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/icon-taxi-2x.png");
+    }
   }
   &--food::before {
     background-image: url("../img/icon-food.png");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/icon-food-2x.png");
+    }
   }
   &--walk::before {
     background-image: url("../img/icon-walk.png");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/icon-walk-2x.png");
+    }
   }
   &--vet::before {
     background-image: url("../img/icon-vet.png");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/icon-vet-2x.png");
+    }
   }
 }
 

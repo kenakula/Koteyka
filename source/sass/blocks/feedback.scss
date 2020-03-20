@@ -51,6 +51,10 @@
     background-image: url("../img/quote-left.png");
     background-position: center;
     background-size: contain;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/quote-left-2x.png");
+    }
   }
 }
 

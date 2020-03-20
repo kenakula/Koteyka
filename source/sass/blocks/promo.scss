@@ -8,6 +8,10 @@
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
+
+  @media (min-resolution: $retina) {
+    background-image: url("../img/promo-mask-mobile.png"), url("../../img/promo-cat-mobile-2x.jpg");
+  }
 }
 
 .promo__inner {

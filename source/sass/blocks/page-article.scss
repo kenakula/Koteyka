@@ -10,6 +10,10 @@
   background-position: bottom center;
   background-repeat: no-repeat;
 
+  @media (min-resolution: $retina) {
+    background-image: url("../img/article-img-mobile-2x.jpg");
+  }
+
   &::before {
     content: "";
     position: absolute;

@@ -1,0 +1,111 @@
+.product__photos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.product__main-img {
+  display: block;
+  width: 100%;
+}
+
+.product__main-img-container {
+  margin-bottom: 15px;
+}
+
+.product__thumbnails {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    display: block;
+  }
+}
+
+.product__description {
+  margin-bottom: 25px;
+}
+
+.product__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $font-rubik-bold;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.product__text {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.product__contents {
+  @include list-reset;
+
+  margin-bottom: 15px;
+}
+
+.product__furniture {
+  position: relative;
+  padding-left: 35px;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &--none::before {
+    background-image: url("../../img/icon-furniture-none.svg");
+  }
+
+  &--bed::before {
+    background-image: url("../../img/icon-furniture-bed.svg");
+  }
+
+  &--pole::before {
+    background-image: url("../../img/icon-furniture-pole.svg");
+  }
+
+  &--ball::before {
+    background-image: url("../../img/icon-furniture-ball.svg");
+  }
+
+  &--house::before {
+    background-image: url("../../img/icon-furniture-house.svg");
+  }
+}
+
+.product__price {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.product__button {
+  padding-left: 80px;
+  width: 290px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}

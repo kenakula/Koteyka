@@ -63,10 +63,10 @@
         </div>
       </div>
     </div>
-    <section class="filter popup popup--filter" id="filter">
+    <section class="filter popup" id="filter">
       <h2 class="visually-hidden">Фильтр объявлений</h2>
       <form class="filter__form" action="#" method="POST" name="filter">
-        <button class="popup__close">Закрыть окно</button>
+        <button class="popup__close" type="button">Закрыть окно</button>
         <fieldset class="filter__field filter__field--price">
           <legend class="filter__legend filter__legend--price">Цена за сутки, ₽</legend>
           <div class="filter__inner">
@@ -139,7 +139,7 @@
               </li>
               <li class="catalog__property">Цена за сутки: <span class="catalog__price">100₱</span> </li>
             </ul>
-            <button class="catalog__button button button--orange">Забронировать</button>
+            <button class="catalog__button button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
@@ -163,7 +163,7 @@
               </li>
               <li class="catalog__property">Цена за сутки: <span class="catalog__price">200₽</span> </li>
             </ul>
-            <button class="catalog__button button button--orange">Забронировать</button>
+            <button class="catalog__button button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
@@ -188,7 +188,7 @@
               </li>
               <li class="catalog__property">Цена за сутки: <span class="catalog__price">250₽</span> </li>
             </ul>
-            <button class="catalog__button button button--orange">Забронировать</button>
+            <button class="catalog__button button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
@@ -213,7 +213,7 @@
               </li>
               <li class="catalog__property">Цена за сутки: <span class="catalog__price">350₽</span> </li>
             </ul>
-            <button class="catalog__button button button--orange">Забронировать</button>
+            <button class="catalog__button button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
@@ -239,7 +239,7 @@
               </li>
               <li class="catalog__property">Цена за сутки: <span class="catalog__price">500₽</span> </li>
             </ul>
-            <button class="catalog__button button button--orange">Забронировать</button>
+            <button class="catalog__button button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
@@ -265,7 +265,7 @@
               </li>
               <li class="catalog__property">Цена за сутки: <span class="catalog__price">600₽</span> </li>
             </ul>
-            <button class="catalog__button button button--orange">Забронировать</button>
+            <button class="catalog__button button button--book button--orange">Забронировать</button>
           </div>
         </li>
       </ul>
@@ -278,7 +278,7 @@
           Акция действует при размещении
           в номерах “Люкс” и “Супер-Люкс”
         </p>
-        <button class="page-article__button button">Забронировать</button>
+        <button class="page-article__button button button--book">Забронировать</button>
       </div>
     </article>
   </main>
@@ -348,7 +348,7 @@
           <a href="index.html#feedback" class="page-footer__link">Отзывы</a>
         </li>
         <li class="page-footer__item">
-          <a href="index.html#contacts" class="page-footer__link">Контакты</a>
+          <a href="#contacts" class="page-footer__link">Контакты</a>
         </li>
       </ul>
       <div class="page-footer__copyrights">
@@ -392,5 +392,9 @@
   </div>
 
   <script src="js/menu.min.js"></script>
+  <script src="js/filter.min.js"></script>
+  <script src="js/sorting.min.js"></script>
+  <script src="js/booking.min.js"></script>
+
 </body>
 </html>

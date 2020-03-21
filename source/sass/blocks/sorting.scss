@@ -7,17 +7,27 @@
 
   position: absolute;
   display: none;
-  top: -26px;
+  top: -35px;
   width: 100%;
   font-size: 14px;
   line-height: 17px;
+
+  &--show {
+    display: block;
+  }
 }
 
 .sorting__item {
+  display: flex;
+  align-items: center;
   padding-left: 20px;
   height: 35px;
   background-color: $white;
   cursor: pointer;
+
+  &:hover {
+    outline: 2px solid $yellow;
+  }
 }
 
 .sorting__toggler {

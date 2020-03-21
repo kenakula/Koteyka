@@ -30,24 +30,42 @@
     return slideListPosition;
   };
 
-  const changeSlide = (position) => {
-    sliderList.style.left = position;
+  const changeSlidePosition = (position, slider) => {
+    slider.style.left = position;
   };
 
-  const changeActiveDot = (evt) => {
-    const currentActiveDot = sliderDotsContainer.querySelector('.slide-controls__dot--active');
+  const changeActiveDot = (evt, container) => {
+    const currentActiveDot = container.querySelector('.slide-controls__dot--active');
     currentActiveDot.classList.remove('slide-controls__dot--active');
     evt.target.classList.add('slide-controls__dot--active');
   };
 
+  const changeSlide = (evt, slidesContainer, dotsContainer) => {
+    let ListPosition = getListPosition(getNewSlideIndex(evt));
+    changeSlidePosition(ListPosition, slidesContainer);
+    changeActiveDot(evt, dotsContainer);
+  };
+
   const onSliderDotClickSlideChange = (evt) => {
     if (evt.target.classList.contains('slide-controls__dot')) {
-      let ListPosition = getListPosition(getNewSlideIndex(evt));
-      changeSlide(ListPosition);
-      changeActiveDot(evt);
+      changeSlide(evt, sliderList, sliderDotsContainer);
     }
   };
 
   sliderDotsContainer.addEventListener('click', onSliderDotClickSlideChange);
+
+  if (document.querySelector('.feedback')) {
+    const feedbackSlider = document.querySelector('.feedback');
+    const feedbackList = feedbackSlider.querySelector('.feedback__list');
+    const feedbackSliderDotsContainer = feedbackSlider.querySelector('.slide-controls__indicators');
+
+    const onFeedbackDotsClickSlideChange = (evt) => {
+      if (evt.target.classList.contains('slide-controls__dot')) {
+        changeSlide(evt, feedbackList, feedbackSliderDotsContainer);
+      }
+    };
+
+    feedbackSliderDotsContainer.addEventListener('click', onFeedbackDotsClickSlideChange);
+  }
 
 })();

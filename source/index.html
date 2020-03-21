@@ -55,7 +55,7 @@
         <p class="promo__text">
           Уютная гостиница для котов и кошек
         </p>
-        <button class="promo__button button">Забронировать</button>
+        <button class="promo__button button button--book" type="button">Забронировать</button>
       </div>
     </section>
     <section class="advantages" id="advantages">
@@ -118,7 +118,7 @@
                     <li class="slider__property">Размеры (ШхГхВ) 90х100х180 см</li>
                     <li class="slider__property">Цена за сутки: 200₽</li>
                   </ul>
-                  <button class="slider__button button button--orange">Забронировать</button>
+                  <button class="slider__button button button--book button--orange">Забронировать</button>
                 </div>
               </li>
 
@@ -135,7 +135,7 @@
                     <li class="slider__property">Размеры (ШхГхВ) 100х125х180 см</li>
                     <li class="slider__property">Цена за сутки: 250₽</li>
                   </ul>
-                  <button class="slider__button button button--orange">Забронировать</button>
+                  <button class="slider__button button button--book button--orange">Забронировать</button>
                 </div>
               </li>
 
@@ -152,7 +152,7 @@
                     <li class="slider__property">Размеры (ШхГхВ) 125х125х180 см</li>
                     <li class="slider__property">Цена за сутки: 350₽</li>
                   </ul>
-                  <button class="slider__button button button--orange">Забронировать</button>
+                  <button class="slider__button button button--book button--orange">Забронировать</button>
                 </div>
               </li>
             </ul>
@@ -174,7 +174,7 @@
     </section>
     <section class="feedback" id="feedback">
       <h2 class="feedback__title">Отзывы</h2>
-      <div class="feedback__wrapper wrapper">
+      <div class="feedback__container">
         <ul class="feedback__list">
           <li class="feedback__item feedback__item--active">
             <p class="feedback__text">
@@ -204,16 +204,16 @@
             </div>
           </li>
         </ul>
-        <div class="slide-controls">
-          <div class="slide-controls__indicators">
-            <span class="slide-controls__dot slide-controls__dot--active"></span>
-            <span class="slide-controls__dot"></span>
-            <span class="slide-controls__dot"></span>
-          </div>
-          <div class="slide-controls__arrows">
-            <span class="slide-controls__arrow--left"></span>
-            <span class="slide-controls__arrow--right"></span>
-          </div>
+      </div>
+      <div class="slide-controls">
+        <div class="slide-controls__indicators">
+          <span class="slide-controls__dot slide-controls__dot--active" data-slide="1"></span>
+          <span class="slide-controls__dot" data-slide="2"></span>
+          <span class="slide-controls__dot" data-slide="3"></span>
+        </div>
+        <div class="slide-controls__arrows">
+          <span class="slide-controls__arrow--left"></span>
+          <span class="slide-controls__arrow--right"></span>
         </div>
       </div>
     </section>
@@ -295,7 +295,7 @@
   </footer>
   <section class="booking popup">
     <form class="booking__form" action="#" method="POST">
-      <button class="popup__close">Закрыть окно</button>
+      <button class="popup__close" type="button">Закрыть окно</button>
       <h2 class="booking__title">Забронировать номер</h2>
       <fieldset class="booking__field booking__field--data">
         <h3 class="visually-hidden">Введите ваши данные, и котика</h3>
@@ -328,5 +328,6 @@
   </div>
   <script src="js/menu.min.js"></script>
   <script src="js/slider.min.js"></script>
+  <script src="js/booking.min.js"></script>
 </body>
 </html>

@@ -1,13 +1,30 @@
+.slider {
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider__inner {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .slider__list {
   @include list-reset;
+
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: all 0.5s ease-in;
 }
 
 .slider__item {
-  display: none;
-
-  &--active {
-    display: block;
-  }
+  position: relative;
+  flex-shrink: 0;
+  width: 320px;
 }
 
 .slider__image-wrapper {

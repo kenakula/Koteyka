@@ -41,3 +41,36 @@
   color: $text-black;
   text-decoration: none;
 }
+
+@media (min-width: $tablet) {
+  .main-nav {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .main-nav__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav__list {
+    display: flex;
+    margin: 0;
+    font-family: $font-lato;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .main-nav__item {
+    padding: 5px 10px;
+  }
+
+  .main-nav__phone {
+    display: none;
+  }
+
+  .main-nav__socials {
+    display: none;
+  }
+}

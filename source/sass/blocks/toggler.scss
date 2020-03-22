@@ -53,3 +53,9 @@
     top: 14px;
   }
 }
+
+@media (min-width: $tablet) {
+  .toggler {
+    display: none;
+  }
+}

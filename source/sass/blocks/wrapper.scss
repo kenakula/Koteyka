@@ -2,3 +2,9 @@
   margin: 0 auto;
   width: 90%;
 }
+
+@media (min-width: $tablet) {
+  .wrapper {
+    width: 88%;
+  }
+}

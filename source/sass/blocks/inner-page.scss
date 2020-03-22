@@ -38,3 +38,26 @@
   line-height: 17px;
   box-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.1);
 }
+
+@media (min-width: $tablet) {
+  .inner-page {
+    &--catalog {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .inner-page__title {
+    margin-right: auto;
+  }
+
+  .inner-page__inner {
+    margin: 0;
+    width: auto;
+  }
+
+  .inner-page__button {
+    margin-right: 40px;
+  }
+}

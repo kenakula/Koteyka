@@ -9,3 +9,18 @@
     background-color: $yellow;
   }
 }
+
+@media (min-width: $tablet) {
+  .page-header {
+    min-height: 76px;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+  }
+
+  .page-header__img {
+    width: 63px;
+    height: 52px;
+  }
+}

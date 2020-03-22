@@ -1,6 +1,6 @@
 .suits {
   position: relative;
-  padding-top: 40px;
+  padding-top: 100px;
   padding-bottom: 70px;
 
   &::before {
@@ -11,6 +11,9 @@
     width: 150px;
     height: 46px;
     background-image: url("../img/fish.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -28,4 +31,23 @@
 
 .suits__wrapper {
   position: relative;
+}
+
+@media (min-width: $tablet) {
+  .suits {
+    padding-top: 60px;
+
+    &::before {
+      top: 100px;
+      width: 425px;
+      height: 130px;
+    }
+  }
+
+  .suits__title {
+    margin-bottom: 60px;
+    width: 300px;
+    font-size: 36px;
+    line-height: 43px;
+  }
 }

@@ -52,22 +52,26 @@
       <div class="product__photos">
         <div class="product__main-img-container">
           <picture>
+            <source media="(min-width: 768px)" srcset="img/product-img-1-tablet.jpg 1x, img/product-img-1-tablet-2x.jpg 2x">
             <img class="product__main-img" src="img/product-img-1-mobile.jpg" srcset="img/product-img-1-mobile-2x.jpg 2x" alt="" width="290">
           </picture>
         </div>
         <div class="product__thumbnails">
           <div class="product__photo-inner">
             <picture>
+              <source media="(min-width: 768px)" srcset="img/product-thumb-1-tablet.jpg 1x, img/product-thumb-1-tablet-2x.jpg 2x">
               <img class="product_thumb-img" src="img/product-thumb-1-mobile.jpg" srcset="img/product-thumb-1-mobile-2x.jpg 2x" alt="" width="86">
             </picture>
           </div>
           <div class="product__photo-inner">
             <picture>
+              <source media="(min-width: 768px)" srcset="img/product-thumb-2-tablet.jpg 1x, img/product-thumb-2-tablet-2x.jpg 2x">
               <img class="product_thumb-img" src="img/product-thumb-2-mobile.jpg" srcset="img/product-thumb-2-mobile-2x.jpg 2x" alt="" width="86">
             </picture>
           </div>
           <div class="product__photo-inner">
             <picture>
+              <source media="(min-width: 768px)" srcset="img/product-thumb-3-tablet.jpg 1x, img/product-thumb-3-tablet-2x.jpg 2x">
               <img class="product_thumb-img" src="img/product-thumb-3-mobile.jpg" srcset="img/product-thumb-3-mobile-2x.jpg 2x" alt="" width="86">
             </picture>
           </div>
@@ -87,8 +91,8 @@
           </ul>
           <p class="product__text">Цена за сутки: <span class="product__price">600₽</span></p>
         </div>
+        <button class="product__button button button--book button--orange">Забронировать</button>
       </div>
-      <button class="product__button button button--book button--orange">Забронировать</button>
     </section>
     <section class="suits">
       <h2 class="suits__title">Другие номера</h2>
@@ -99,6 +103,7 @@
               <li class="slider__item">
                 <div class="slider__image-wrapper">
                   <picture>
+                    <source media="(min-width: 768px)" srcset="img/slider-1-tablet.jpg 1x, img/slider-1-tablet-2x.jpg 2x">
                     <img class="slider__photo" src="img/slider-1-mobile.jpg" srcset="img/slider-1-mobile-2x.jpg 2x" width="290" height="192" alt="фото номера эконом класса">
                   </picture>
                 </div>
@@ -116,6 +121,7 @@
               <li class="slider__item">
                 <div class="slider__image-wrapper">
                   <picture>
+                    <source media="(min-width: 768px)" srcset="img/slider-2-tablet.jpg 1x, img/slider-2-tablet-2x.jpg 2x">
                     <img class="slider__photo" src="img/slider-2-mobile.jpg" srcset="img/slider-2-mobile-2x.jpg 2x" width="290" height="192" alt="фото номера комфорт класса">
                   </picture>
                 </div>
@@ -133,6 +139,7 @@
               <li class="slider__item">
                 <div class="slider__image-wrapper">
                   <picture>
+                    <source media="(min-width: 768px)" srcset="img/slider-3-tablet.jpg 1x, img/slider-3-tablet-2x.jpg 2x">
                     <img class="slider__photo" src="img/slider-3-mobile.jpg" srcset="img/slider-3-mobile-2x.jpg 2x" width="290" height="192" alt="фото номера сьют класса">
                   </picture>
                 </div>
@@ -249,8 +256,8 @@
         <input class="booking__input booking__input--data" type="tel" placeholder="Телефон">
         <input class="booking__input booking__input--data" type="email" placeholder="E-mail">
       </fieldset>
-      <fieldset class="booking__field booking__field--checkin">
-        <h3 class="booking__legend">Дата заезда</h3>
+      <div class="booking__field booking__field--checkin">
+        <h3 class="booking__legend booking__legend--checkin">Дата заезда</h3>
         <div class="booking__inner">
           <label for="checkin" class="booking__label">с</label>
           <input class="booking__input booking__input--checkin" id="checkin" type="text" placeholder="26.01.2020">
@@ -258,7 +265,7 @@
           <label for="checkout" class="booking__label">по</label>
           <input class="booking__input booking__input--checkin" id="checkout" type="text" placeholder="26.02.2020">
         </div>
-      </fieldset>
+      </div>
       <button class="booking__button button button--orange">Отправить заявку</button>
     </form>
   </section>
@@ -271,8 +278,9 @@
       <button class="success__button button button--orange">Ок</button>
     </div>
   </div>
+  <script src="js/util.min.js"></script>
   <script src="js/menu.min.js"></script>
-  <script src="js/slider.min.js"></script>
+  <script src="js/slider-suits.min.js"></script>
   <script src="js/booking.min.js"></script>
 </body>
 </html>

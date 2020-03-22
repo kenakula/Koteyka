@@ -9,8 +9,10 @@
   display: none;
   top: -35px;
   width: 100%;
+  border-radius: 10px;
   font-size: 14px;
   line-height: 17px;
+  background-color: $white;
 
   &--show {
     display: block;
@@ -22,7 +24,6 @@
   align-items: center;
   padding-left: 20px;
   height: 35px;
-  background-color: $white;
   cursor: pointer;
 
   &:hover {

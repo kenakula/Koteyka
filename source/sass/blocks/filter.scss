@@ -119,3 +119,15 @@
     border: 3px solid $yellow;
   }
 }
+
+@media (min-width: $tablet) {
+  .filter__form {
+    width: 332px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .filter__button {
+    width: 100%;
+  }
+}

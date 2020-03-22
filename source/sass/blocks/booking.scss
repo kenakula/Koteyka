@@ -80,3 +80,32 @@
   margin: 0 auto;
   padding-left: 20px;
 }
+
+@media (min-width: $tablet) {
+  .booking__form {
+    padding: 60px 30px 40px;
+    width: 502px;
+  }
+
+  .booking__field {
+    flex-direction: row;
+
+    &--checkin {
+      margin-bottom: 50px;
+    }
+  }
+
+  .booking__legend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .booking__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+}

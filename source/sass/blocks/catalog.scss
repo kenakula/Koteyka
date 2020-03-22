@@ -69,3 +69,17 @@
 .catalog__button {
   margin: 0 auto;
 }
+
+@media (min-width: $tablet) {
+  .catalog {
+    display: flex;
+    justify-content: center;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 678px;
+  }
+}

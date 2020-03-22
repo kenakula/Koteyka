@@ -7,30 +7,25 @@
   const filter = document.querySelector('.filter');
   const closeButton = filter.querySelector('.popup__close');
 
-  const showFilter = () => {
-    filter.classList.add('popup--show');
-  };
-
-  const closeFilter = () => {
-    filter.classList.remove('popup--show');
-  };
-
   const onFilterTogglerFilterShow = () => {
-    showFilter();
+    window.util.showPopup(filter);
+    document.addEventListener('keydown', onEscButtonPopupClose);
   };
 
   const onCloseButtonPopupClose = (evt) => {
     evt.preventDefault();
-    closeFilter();
+    window.util.closePopup(filter);
+    document.removeEventListener('keydown', onEscButtonPopupClose);
   }
 
   const onEscButtonPopupClose = (evt) => {
     if (evt.key === ESC_KEY) {
-      closeFilter();
+      window.util.closePopup(filter);
+      document.removeEventListener('keydown', onEscButtonPopupClose);
     }
   };
 
   filterToggler.addEventListener('click', onFilterTogglerFilterShow);
   closeButton.addEventListener('click', onCloseButtonPopupClose);
-  document.addEventListener('keydown', onEscButtonPopupClose);
+
 })();

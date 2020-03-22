@@ -79,3 +79,29 @@
 .slider__button {
   margin: 0 auto;
 }
+
+@media (min-width: $tablet) {
+  .slider__inner {
+    width: 768px;
+  }
+
+  .slider__item {
+    display: flex;
+    padding-left: 45px;
+    width: 768px;
+  }
+
+  .slider__photo {
+    width: 100%;
+    height: 326px;
+  }
+
+  .slider__description {
+    align-self: center;
+    margin-left: -90px;
+    width: 345px;
+    height: 266px;
+    border-radius: 10px;
+    background-color: $white;
+  }
+}

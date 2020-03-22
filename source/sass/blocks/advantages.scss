@@ -11,6 +11,9 @@
     width: 100px;
     height: 131px;
     background-image: url("../img/bg-paw-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 
@@ -29,5 +32,33 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet) {
+  .advantages {
+    padding-top: 110px;
+
+    &::before {
+      width: 240px;
+      height: 257px;
+    }
+  }
+
+  .advantages__title {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .advantages__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $white;
+  }
+
+  .advantages__card {
+    margin: 0;
+    width: 45%;
   }
 }

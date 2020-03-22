@@ -11,6 +11,9 @@
     width: 100px;
     height: 131px;
     background-image: url("../img/bg-paw-adv-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 
@@ -59,13 +62,9 @@
     display: block;
     width: 21px;
     height: 21px;
-    background-image: url("../img/quote-left.png");
+    background-image: url("../img/quote-left.svg");
     background-position: center;
     background-size: contain;
-
-    @media (min-resolution: $retina) {
-      background-image: url("../img/quote-left-2x.png");
-    }
   }
 }
 
@@ -77,4 +76,42 @@
 
 .feedback__inner {
   display: none;
+}
+
+@media (min-width: $tablet) {
+  .feedback {
+    &::before {
+      top: -100px;
+      width: 240px;
+      height: 257px;
+    }
+  }
+
+  .feedback__title {
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .feedback__container {
+    width: 768px;
+    padding-left: 45px;
+  }
+
+  .feedback__item {
+    margin-right: 30px;
+    width: 442px;
+  }
+
+  .feedback__text {
+    margin-bottom: 15px;
+  }
+
+  .feedback__inner {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 17px;
+    color: $feedback-grey;
+  }
 }

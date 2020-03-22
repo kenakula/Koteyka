@@ -43,3 +43,30 @@
 .promo__button {
   margin: 0 auto;
 }
+
+@media (min-width: $tablet) {
+  .promo {
+    padding-top: 140px;
+    min-height: 868px;
+    background-image: url("../../img/promo-mask-tablet.png"), url("../../img/promo-cat-tablet.jpg");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/promo-mask-mobile.png"), url("../img/promo-cat-tablet-2x.jpg");
+    }
+  }
+
+  .promo__city {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .promo__title {
+    font-size: 62px;
+    line-height: 73px;
+  }
+
+  .promo__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

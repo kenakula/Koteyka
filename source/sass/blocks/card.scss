@@ -70,3 +70,9 @@
   font-size: 15px;
   line-height: 140%;
 }
+
+@media (min-width: $tablet) {
+  .card {
+    padding: 110px 20px 25px;
+  }
+}

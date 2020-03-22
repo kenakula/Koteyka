@@ -46,3 +46,9 @@
   margin: 0 auto;
   width: 122px;
 }
+
+@media (min-width: $tablet) {
+  .success__inner {
+    width: 502px;
+  }
+}

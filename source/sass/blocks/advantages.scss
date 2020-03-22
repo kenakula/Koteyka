@@ -62,3 +62,9 @@
     width: 45%;
   }
 }
+
+@media (min-width: $desktop) {
+  .advantages__card {
+    width: 30%;
+  }
+}

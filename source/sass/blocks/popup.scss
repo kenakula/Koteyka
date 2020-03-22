@@ -29,3 +29,15 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media (min-width: $desktop) {
+  .popup {
+    &--filter {
+      position: static;
+      display: block;
+      width: auto;
+      height: auto;
+      backdrop-filter: none;
+    }
+  }
+}

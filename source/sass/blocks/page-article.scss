@@ -90,3 +90,24 @@
     line-height: 140%;
   }
 }
+
+@media (min-width: $desktop) {
+  .page-article {
+    padding-top: 70px;
+    padding-left: 270px;
+    width: 100%;
+    min-height: auto;
+    height: 359px;
+    background-image: url("../img/article-img-desktop.jpg");
+    background-position: bottom right;
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/article-img-desktop-2x.jpg");
+    }
+  }
+
+  .page-article__title {
+    width: 400px;
+  }
+
+}

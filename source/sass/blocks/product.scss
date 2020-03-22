@@ -135,3 +135,25 @@
     line-height: 18px;
   }
 }
+
+@media (min-width: $desktop) {
+  .product__photos {
+    flex-direction: row;
+    max-height: 396px;
+  }
+
+  .product__main-img-container {
+    margin-bottom: 0;
+  }
+
+  .product__thumbnails {
+    flex-direction: column;
+    margin-right: 30px;
+    order: -1;
+
+    img {
+      width: 70px;
+    }
+  }
+
+}

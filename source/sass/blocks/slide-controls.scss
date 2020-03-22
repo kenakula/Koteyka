@@ -29,3 +29,56 @@
 .slide-controls__arrows {
   display: none;
 }
+
+@media (min-width: $desktop) {
+  .slide-controls {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 45px;
+    width: 960px;
+  }
+
+  .slide-controls__indicators {
+    margin: 0;
+    margin-left: 270px;
+  }
+
+  .slide-controls__arrows {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .slide-controls__arrow {
+    @include button-reset;
+
+    position: relative;
+    display: block;
+    margin-right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $white;
+    box-shadow: 0 2px 12px rgba($color: $slider-arrow-shadow, $alpha: 0.25);
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-image: url("../../img/slider-arrow-left.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &--right {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

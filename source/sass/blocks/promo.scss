@@ -70,3 +70,26 @@
     line-height: 24px;
   }
 }
+
+@media (min-width: $desktop) {
+  .promo {
+    justify-content: flex-start;
+    padding-top: 140px;
+    padding-left: 14%;
+    min-height: 504px;
+    background-image: url("../../img/promo-mask-desktop.png"), url("../../img/promo-cat-desktop.jpg");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/promo-mask-desktop.png"), url("../img/promo-cat-desktop-2x.jpg");
+      background-position: top left, bottom right;
+    }
+  }
+
+  .promo__inner {
+    text-align: left;
+  }
+
+  .promo__button {
+    margin: 0;
+  }
+}

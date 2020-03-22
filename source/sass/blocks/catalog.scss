@@ -83,3 +83,23 @@
     width: 678px;
   }
 }
+
+@media (min-width: $desktop) {
+  .catalog {
+    padding-top: 0;
+    flex-grow: 1;
+  }
+
+  .catalog__list {
+    width: 930px;
+  }
+
+  .catalog__item {
+    margin-right: 30px;
+    width: 290px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

@@ -46,3 +46,14 @@
   color: $text-black;
   text-decoration: none;
 }
+
+@media (min-width: $desktop) {
+  .contacts {
+    padding: 60px 0;
+    max-width: 568px;
+  }
+
+  .contacts__wrapper {
+    width: 270px;
+  }
+}

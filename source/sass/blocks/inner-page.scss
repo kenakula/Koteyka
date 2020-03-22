@@ -61,3 +61,21 @@
     margin-right: 40px;
   }
 }
+
+@media (min-width: $desktop) {
+  .inner-page {
+    &--catalog {
+      justify-content: space-between;
+    }
+  }
+
+  .inner-page__inner {
+    position: absolute;
+    right: 15%;
+    width: auto;
+  }
+
+  .inner-page__title {
+    width: 100%;
+  }
+}

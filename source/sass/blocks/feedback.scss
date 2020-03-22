@@ -115,3 +115,14 @@
     color: $feedback-grey;
   }
 }
+
+@media (min-width: $desktop) {
+  .feedback__container {
+    width: 100%;
+    padding-left: 90px;
+  }
+
+  .feedback__item {
+    width: 470px;
+  }
+}

@@ -32,6 +32,8 @@
 
 @media (min-width: $desktop) {
   .popup {
+    overflow: auto;
+
     &--filter {
       position: static;
       display: block;

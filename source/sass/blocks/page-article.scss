@@ -100,7 +100,7 @@
     min-height: auto;
     height: 359px;
     background-image: url("../img/article-img-desktop.jpg");
-    background-position: bottom right;
+    background-position: center right;
 
     @media (min-resolution: $retina) {
       background-image: url("../img/article-img-desktop-2x.jpg");

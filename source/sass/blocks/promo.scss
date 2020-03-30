@@ -1,6 +1,7 @@
 .promo {
   display: flex;
   justify-content: center;
+  padding: 50px 20px 0;
   padding-top: 50px;
   min-height: 457px;
   background-color: $yellow;
@@ -55,6 +56,10 @@
     }
   }
 
+  .promo__inner {
+    padding: 0 20%;
+  }
+
   .promo__city {
     font-size: 14px;
     line-height: 17px;
@@ -86,6 +91,7 @@
   }
 
   .promo__inner {
+    padding-left: 0;
     text-align: left;
   }
 

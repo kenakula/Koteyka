@@ -20,6 +20,7 @@
 .feedback__title {
   margin: 0;
   margin-bottom: 20px;
+  padding: 0 30px;
   font-family: $font-rubik-bold;
   font-weight: bold;
   font-size: 28px;
@@ -113,6 +114,10 @@
     font-size: 14px;
     line-height: 17px;
     color: $feedback-grey;
+  }
+
+  .feedback__author {
+    margin-right: 20px;
   }
 }
 

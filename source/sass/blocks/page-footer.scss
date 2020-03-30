@@ -83,6 +83,7 @@
   .page-footer__menu {
     margin-left: auto;
     padding: 0;
+    max-width: 500px;
   }
 
   .page-footer__item {
@@ -121,5 +122,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+  }
+}
+
+@media (min-width: $desktop) {
+  .page-footer__menu {
+    max-width: 800px;
   }
 }

@@ -3,6 +3,7 @@
 (function () {
   const LEFT_DIRECTION = 'left';
   const RIGHT_DIRECTION = 'right';
+  const ENTER_KEY = 'Enter';
 
   const slider = document.querySelector('.feedback');
   const sliderList = slider.querySelector('.feedback__list');
@@ -30,12 +31,22 @@
 
   };
 
+  const changeSlideByDots = (evt, slide, list, dotsContainer) => {
+    window.util.changeSlideByDots(evt, slide, list);
+    window.util.switchActiveDotByDots(evt, dotsContainer);
+  };
+
   const onSliderDotClickSlideChange = (evt) => {
     if (evt.target.classList.contains('slide-controls__dot')) {
-      window.util.changeSlideByDots(evt, sliderItem, sliderList);
-      window.util.switchActiveDotByDots(evt, sliderDotsContainer);
+      changeSlideByDots(evt, sliderItem, sliderList, sliderDotsContainer);
     }
   };
+
+  const onSliderDotEnterPressSlideChange = (evt) => {
+    if (evt.key === ENTER_KEY) {
+      changeSlideByDots(evt, sliderItem, sliderList, sliderDotsContainer);
+    }
+  }
 
   const onSliderLeftArrowsClickSlideChange = (evt) => {
     window.util.changeSlideByArrows(sliderList, sliderItem, LEFT_DIRECTION);
@@ -48,6 +59,7 @@
   };
 
   sliderDotsContainer.addEventListener('click', onSliderDotClickSlideChange);
+  sliderDotsContainer.addEventListener('keydown', onSliderDotEnterPressSlideChange);
   leftArrow.addEventListener('click', onSliderLeftArrowsClickSlideChange);
   rightArrow.addEventListener('click', onSliderRightArrowsClickSlideChange);
 

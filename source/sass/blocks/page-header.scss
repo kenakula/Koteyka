@@ -19,6 +19,11 @@
     display: flex;
   }
 
+  .page-header__logo {
+    display: flex;
+    align-items: center;
+  }
+
   .page-header__img {
     width: 63px;
     height: 52px;

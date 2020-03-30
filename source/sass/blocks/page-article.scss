@@ -71,6 +71,7 @@
 
   .page-article__inner {
     align-items: flex-start;
+    padding-right: 40%;
   }
 
   .page-article__title {
@@ -104,6 +105,10 @@
     @media (min-resolution: $retina) {
       background-image: url("../img/article-img-desktop-2x.jpg");
     }
+  }
+
+  .page-article__inner {
+    padding-right: 50%;
   }
 
   .page-article__title {

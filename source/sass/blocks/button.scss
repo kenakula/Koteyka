@@ -13,6 +13,7 @@
   text-align: left;
   background-color: $white;
   cursor: pointer;
+  outline: none;
 
   &::after {
     content: "";
@@ -33,5 +34,17 @@
     &::after {
       background-image: url("../img/icon-button-orange-paw.svg");
     }
+  }
+
+  &:focus {
+    box-shadow: 0 0 3px 2px rgb(98, 190, 221);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

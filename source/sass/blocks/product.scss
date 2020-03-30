@@ -110,6 +110,10 @@
   line-height: 19px;
 }
 
+.product__photo-inner {
+  cursor: pointer;
+}
+
 @media (min-width: $tablet) {
   .product {
     display: flex;

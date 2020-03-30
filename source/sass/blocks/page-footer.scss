@@ -17,6 +17,7 @@
 }
 
 .page-footer__item {
+  position: relative;
   margin-bottom: 15px;
   width: 50%;
 }
@@ -94,6 +95,25 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $text-black;
+      transition: all 0.3s ease-in;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 

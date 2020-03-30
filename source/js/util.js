@@ -80,6 +80,16 @@
     popup.classList.remove('popup--show');
   }
 
+  const forbidFocus = (slider, slides) => {
+    let activeSlide = slider.querySelectorAll('.slider__item--active');
+
+    slides.forEach((it) => {
+      it.classList.add('slide-inactive');
+    })
+
+    activeSlide.classList.remove('slide-inactive');
+  };
+
   window.util = {
     switchActiveDotByArrows: switchActiveDotByArrows,
     dotIndexMisscarry: dotIndexMisscarry,
@@ -87,6 +97,7 @@
     changeSlideByArrows: changeSlideByArrows,
     switchActiveDotByDots: switchActiveDotByDots,
     showPopup: showPopup,
-    closePopup: closePopup
+    closePopup: closePopup,
+    forbidFocus: forbidFocus
   }
 })();

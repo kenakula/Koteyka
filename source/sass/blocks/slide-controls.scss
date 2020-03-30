@@ -24,6 +24,10 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover:not(.slide-controls__dot--active) {
+    background-color: rgba($color: $text-grey, $alpha: 0.4);
+  }
 }
 
 .slide-controls__arrows {
@@ -79,6 +83,14 @@
       &::before {
         transform: rotate(180deg);
       }
+    }
+
+    &:hover {
+      box-shadow: 0 2px 12px rgba($color: $slider-arrow-shadow, $alpha: 0.7);
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 }

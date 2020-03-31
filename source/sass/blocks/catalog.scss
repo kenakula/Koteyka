@@ -1,7 +1,6 @@
 .catalog {
   margin-bottom: 40px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 0;
 }
 
 .catalog__list {
@@ -63,7 +62,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-
 }
 
 .catalog__button {

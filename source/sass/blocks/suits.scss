@@ -1,7 +1,6 @@
 .suits {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 70px;
+  padding: 100px 0 70px 0;
 
   &::before {
     content: "";

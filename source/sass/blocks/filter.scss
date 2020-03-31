@@ -95,8 +95,7 @@
 .filter__button {
   @include button-reset;
 
-  margin: 0 auto;
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
   height: 42px;
   width: 240px;
   border-radius: 30px;

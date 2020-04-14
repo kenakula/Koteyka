@@ -49,7 +49,7 @@
   .promo {
     padding-top: 140px;
     min-height: 868px;
-    background-image: url("../../img/promo-mask-tablet.png"), url("../../img/promo-cat-tablet.jpg");
+    background-image: url("../img/promo-mask-tablet.png"), url("../img/promo-cat-tablet.jpg");
 
     @media (min-resolution: $retina) {
       background-image: url("../img/promo-mask-mobile.png"), url("../img/promo-cat-tablet-2x.jpg");

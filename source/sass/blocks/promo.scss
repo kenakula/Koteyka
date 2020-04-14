@@ -7,7 +7,7 @@
   background-color: $yellow;
   background-image: url("../img/promo-mask-mobile.png"), url("../img/promo-cat-mobile.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: bottom center;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina) {
@@ -86,7 +86,7 @@
 
     @media (min-resolution: $retina) {
       background-image: url("../img/promo-mask-desktop.png"), url("../img/promo-cat-desktop-2x.jpg");
-      background-position: top left, bottom right;
+      background-position: top left, center bottom;
     }
   }
 

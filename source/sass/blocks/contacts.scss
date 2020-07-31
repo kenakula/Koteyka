@@ -1,16 +1,16 @@
 .contacts {
   padding: 40px 0;
   background-color: $yellow;
-}
 
-.contacts__title {
-  margin: 0;
-  margin-bottom: 30px;
-  font-family: $font-rubik-bold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 33px;
+  h2 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: $font-rubik-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .contacts__list {
@@ -24,28 +24,28 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
 
-.contacts__contact {
-  margin: 0;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-}
+  h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
 
-.contacts__text {
-  margin: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-}
+  p,
+  address {
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+  }
 
-.contacts__phone,
-.contacts__email {
-  color: $text-black;
-  text-decoration: none;
+  a {
+    color: $text-black;
+    text-decoration: none;
+  }
 }
 
 @media (min-width: $desktop) {

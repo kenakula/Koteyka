@@ -9,6 +9,17 @@
     display: block;
     padding-top: 30px;
   }
+
+  > a {
+    display: block;
+    margin-bottom: 20px;
+    font-family: $font-rubik;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $text-black;
+    text-decoration: none;
+  }
 }
 
 .main-nav__list {
@@ -25,22 +36,11 @@
 .main-nav__item {
   position: relative;
   padding: 5px 0;
-}
 
-.main-nav__link {
-  color: $text-black;
-  text-decoration: none;
-}
-
-.main-nav__phone {
-  display: block;
-  margin-bottom: 20px;
-  font-family: $font-rubik;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: $text-black;
-  text-decoration: none;
+  a {
+    color: $text-black;
+    text-decoration: none;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -52,6 +52,10 @@
   .main-nav__menu {
     display: flex;
     align-items: center;
+
+    > a {
+      display: none;
+    }
   }
 
   .main-nav__list {
@@ -91,10 +95,6 @@
     &:active {
       opacity: 0.5;
     }
-  }
-
-  .main-nav__phone {
-    display: none;
   }
 
   .main-nav__socials {

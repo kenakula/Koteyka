@@ -14,18 +14,18 @@
     background-size: cover;
     background-position: center;
   }
-}
 
-.suits__title {
-  margin: 0 auto;
-  margin-bottom: 30px;
-  width: 120px;
-  font-family: $font-rubik-bold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 33px;
-  text-align: center;
+  h2 {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 120px;
+    font-family: $font-rubik-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+  }
 }
 
 .suits__wrapper {
@@ -41,12 +41,12 @@
       width: 425px;
       height: 130px;
     }
-  }
 
-  .suits__title {
-    margin-bottom: 60px;
-    width: 300px;
-    font-size: 36px;
-    line-height: 43px;
+    h2 {
+      margin-bottom: 60px;
+      width: 300px;
+      font-size: 36px;
+      line-height: 43px;
+    }
   }
 }

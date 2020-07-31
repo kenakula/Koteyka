@@ -3,31 +3,37 @@
 }
 
 .slide-controls__indicators {
-  display: flex;
   margin: 0 auto;
   width: 60px;
 }
 
+.slide-controls__list {
+  @include list-reset;
+
+  display: flex;
+
+  li {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .slide-controls__dot {
+  @include button-reset;
+
   display: block;
-  margin-right: 12px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: $grey;
   cursor: pointer;
+}
 
-  &--active {
-    background-color: $yellow;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &:hover:not(.slide-controls__dot--active) {
-    background-color: rgba($color: $text-grey, $alpha: 0.4);
-  }
+.slick-active .slide-controls__dot {
+  background-color: $yellow;
 }
 
 .slide-controls__arrows {
@@ -51,6 +57,7 @@
   .slide-controls__arrows {
     display: flex;
     margin-left: auto;
+    margin-right: 40px;
   }
 
   .slide-controls__arrow {

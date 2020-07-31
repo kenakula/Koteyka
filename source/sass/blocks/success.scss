@@ -21,30 +21,30 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-}
 
-.success__title {
-  margin: 0;
-  margin-bottom: 15px;
-  font-family: $font-rubik-bold;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-}
+  h2 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: $font-rubik-bold;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
 
-.success__text {
-  margin: 0 auto;
-  margin-bottom: 30px;
-  width: 155px;
-  font-size: 16px;
-  line-height: 140%;
-  text-align: center;
-}
+  p {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 155px;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+  }
 
-.success__button {
-  margin: 0 auto;
-  width: 122px;
+  button {
+    margin: 0 auto;
+    width: 122px;
+  }
 }
 
 @media (min-width: $tablet) {

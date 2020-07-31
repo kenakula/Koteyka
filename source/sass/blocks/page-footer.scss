@@ -20,14 +20,14 @@
   position: relative;
   margin-bottom: 15px;
   width: 50%;
-}
 
-.page-footer__link {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  color: $text-black;
-  text-decoration: none;
+  a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: $text-black;
+    text-decoration: none;
+  }
 }
 
 .page-footer__copyrights {

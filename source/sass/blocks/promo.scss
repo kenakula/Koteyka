@@ -17,32 +17,32 @@
 
 .promo__inner {
   text-align: center;
-}
 
-.promo__city {
-  font-size: 12px;
-  line-height: 14px;
-}
+  span {
+    font-size: 12px;
+    line-height: 14px;
+  }
 
-.promo__title {
-  margin: 0;
-  margin-bottom: 10px;
-  font-family: $font-rubik-bold;
-  font-weight: bold;
-  font-size: 44px;
-  line-height: 52px;
-}
+  h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: $font-rubik-bold;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 52px;
+  }
 
-.promo__text {
-  margin: 0;
-  margin-bottom: 30px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-}
+  p {
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
 
-.promo__button {
-  margin: 0 auto;
+  button {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -58,21 +58,21 @@
 
   .promo__inner {
     padding: 0 20%;
-  }
 
-  .promo__city {
-    font-size: 14px;
-    line-height: 17px;
-  }
+    span {
+      font-size: 14px;
+      line-height: 17px;
+    }
 
-  .promo__title {
-    font-size: 62px;
-    line-height: 73px;
-  }
+    h2 {
+      font-size: 62px;
+      line-height: 73px;
+    }
 
-  .promo__text {
-    font-size: 20px;
-    line-height: 24px;
+    p {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -93,9 +93,9 @@
   .promo__inner {
     padding-left: 0;
     text-align: left;
-  }
 
-  .promo__button {
-    margin: 0;
+    button {
+      margin: 0;
+    }
   }
 }

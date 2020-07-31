@@ -60,20 +60,20 @@
       background-image: url("../img/icon-vet-2x.png");
     }
   }
-}
 
-.card__title {
-  margin: 0;
-  margin-bottom: 10px;
-  font-family: $font-rubik;
-  font-size: 18px;
-  line-height: 140%;
-}
+  h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: $font-rubik;
+    font-size: 18px;
+    line-height: 140%;
+  }
 
-.card__text {
-  margin: 0;
-  font-size: 15px;
-  line-height: 140%;
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 140%;
+  }
 }
 
 @media (min-width: $tablet) {

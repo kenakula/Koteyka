@@ -4,13 +4,13 @@
   margin-bottom: 40px;
 }
 
-.product__main-img {
-  display: block;
-  width: 100%;
-}
-
 .product__main-img-container {
   margin-bottom: 15px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 .product__thumbnails {

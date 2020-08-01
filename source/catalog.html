@@ -10,10 +10,9 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Rubik.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Rubikbold.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
-<body>
+<body class="no-js">
   <header class="page-header">
     <div class="page-header__wrapper wrapper">
       <a href="index.html" class="page-header__logo">
@@ -55,7 +54,7 @@
     </div>
   </header>
   <main class="inner-page inner-page--catalog wrapper">
-    <h1 class="inner-page__title">Наши номера</h1>
+    <h1>Наши номера</h1>
     <div class="inner-page__inner">
       <button class="inner-page__button filter__toggler">Фильтры</button>
       <div class="inner-page__sorting sorting">
@@ -74,61 +73,61 @@
       <h2 class="visually-hidden">Фильтр объявлений</h2>
       <form class="filter__form" action="#" method="POST" name="filter">
         <button class="popup__close" type="button">Закрыть окно</button>
-        <fieldset class="filter__field filter__field--price">
-          <legend class="filter__legend filter__legend--price">Цена за сутки, ₽</legend>
+        <fieldset>
+          <legend>Цена за сутки, ₽</legend>
           <div class="filter__inner">
-            <input class="filter__input filter__input--price" id="min-price" type="text" placeholder="от 100">
-            <input class="filter__input filter__input--price" id="max-price" type="text" placeholder="до 600">
+            <input id="min-price" type="text" placeholder="от 100">
+            <input id="max-price" type="text" placeholder="до 600">
           </div>
         </fieldset>
-        <fieldset class="filter__field filter__field--space">
-          <legend class="filter__legend filter__legend--space">Площадь</legend>
+        <fieldset>
+          <legend>Площадь</legend>
 
-          <input class="filter__checkbox visually-hidden" id="space1" type="checkbox" checked>
-          <label class="filter__label filter__label--space" for="space1">0,63 м2</label>
+          <input class="visually-hidden" id="space1" type="checkbox" checked>
+          <label for="space1">0,63 м2</label>
 
-          <input class="filter__checkbox visually-hidden" id="space2" type="checkbox" checked>
-          <label class="filter__label filter__label--space" for="space2">0,90 м2</label>
+          <input class="visually-hidden" id="space2" type="checkbox" checked>
+          <label for="space2">0,90 м2</label>
 
-          <input class="filter__checkbox visually-hidden" id="space3" type="checkbox" checked>
-          <label class="filter__label filter__label--space" for="space3">1,13 м2</label>
+          <input class="visually-hidden" id="space3" type="checkbox" checked>
+          <label for="space3">1,13 м2</label>
 
-          <input class="filter__checkbox visually-hidden" id="space4" type="checkbox" checked>
-          <label class="filter__label filter__label--space" for="space4">1,56 м2</label>
+          <input class="visually-hidden" id="space4" type="checkbox" checked>
+          <label for="space4">1,56 м2</label>
 
-          <input class="filter__checkbox visually-hidden" id="space5" type="checkbox" checked>
-          <label class="filter__label filter__label--space" for="space5">2,56 м2</label>
+          <input class="visually-hidden" id="space5" type="checkbox" checked>
+          <label for="space5">2,56 м2</label>
 
-          <input class="filter__checkbox visually-hidden" id="space6" type="checkbox" checked>
-          <label class="filter__label filter__label--space" for="space6">2,88 м2</label>
+          <input class="visually-hidden" id="space6" type="checkbox" checked>
+          <label for="space6">2,88 м2</label>
         </fieldset>
-        <fieldset class="filter__field filter__field--contents">
-          <legend class="filter__legend filter__legend--contents">Оснащение номера</legend>
+        <fieldset>
+          <legend>Оснащение номера</legend>
 
-          <input class="filter__checkbox visually-hidden" id="empty" type="checkbox" checked>
-          <label class="filter__label filter__label--contents" for="empty">Пустой номер</label>
+          <input class="visually-hidden" id="empty" type="checkbox" checked>
+          <label for="empty">Пустой номер</label>
 
-          <input class="filter__checkbox visually-hidden" id="bed" type="checkbox" checked>
-          <label class="filter__label filter__label--contents" for="bed">Лежак</label>
+          <input class="visually-hidden" id="bed" type="checkbox" checked>
+          <label for="bed">Лежак</label>
 
-          <input class="filter__checkbox visually-hidden" id="pole" type="checkbox" checked>
-          <label class="filter__label filter__label--contents" for="pole">Когтеточка</label>
+          <input class="visually-hidden" id="pole" type="checkbox" checked>
+          <label for="pole">Когтеточка</label>
 
-          <input class="filter__checkbox visually-hidden" id="ball" type="checkbox" checked>
-          <label class="filter__label filter__label--contents" for="ball">Игровой-комплекс</label>
+          <input class="visually-hidden" id="ball" type="checkbox" checked>
+          <label for="ball">Игровой-комплекс</label>
 
-          <input class="filter__checkbox visually-hidden" id="house" type="checkbox" checked>
-          <label class="filter__label filter__label--contents" for="house">Домик</label>
+          <input class="visually-hidden" id="house" type="checkbox" checked>
+          <label for="house">Домик</label>
         </fieldset>
-        <button class="filter__button filter__button--submit">Подобрать</button>
-        <button class="filter__button filter__button--reset">Сбросить фильтр</button>
+        <button type="submit">Подобрать</button>
+        <button type="button">Сбросить фильтр</button>
       </form>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Список номеров гостиницы</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <a href="product.html" class="catalog__image-wrapper">
+          <a href="product.html">
             <picture>
               <source type="image/webp" media="(min-width: 1366px)"
                 srcset="img/catalog-img-1-desktop.webp 1x, img/catalog-img-1-desktop-2x.webp 2x">
@@ -140,31 +139,31 @@
                 srcset="img/catalog-img-1-desktop.jpg 1x, img/catalog-img-1-desktop-2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/catalog-img-1-tablet.jpg 1x, img/catalog-img-1-tablet-2x.jpg 2x">
-              <img class="catalog__photo" src="img/catalog-img-1-mobile.jpg" srcset="img/catalog-img-1-mobile-2x.jpg 2x"
-                width="290" alt="фото номера эконом класса">
+              <img src="img/catalog-img-1-mobile.jpg" srcset="img/catalog-img-1-mobile-2x.jpg 2x" width="290"
+                alt="фото номера эконом класса">
             </picture>
           </a>
           <div class="catalog__description">
-            <a class="catalog__title">
-              <h3 class="catalog__title">Эконом</h3>
+            <a>
+              <h3>Эконом</h3>
             </a>
             <ul class="catalog__properties">
-              <li class="catalog__property">Размеры (ШхГхВ) - 90х70х180 см</li>
-              <li class="catalog__property">Площадь - 0,63 м2</li>
+              <li>Размеры (ШхГхВ) - 90х70х180 см</li>
+              <li>Площадь - 0,63 м2</li>
               <li class="catalog__property furniture">
                 Оснащение номера
                 <ul class="furniture__list">
                   <li class="furniture__item furniture__item--none"></li>
                 </ul>
               </li>
-              <li class="catalog__property">Цена за сутки: <span class="catalog__price">100₱</span> </li>
+              <li>Цена за сутки: <span class="catalog__price">100₱</span> </li>
             </ul>
-            <button class="catalog__button button button--book button--orange">Забронировать</button>
+            <button class="button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
         <li class="catalog__item">
-          <a href="product.html" class="catalog__image-wrapper">
+          <a href="product.html">
             <picture>
               <source type="image/webp" media="(min-width: 1366px)"
                 srcset="img/catalog-img-2-desktop.webp 1x, img/catalog-img-2-desktop-2x.webp 2x">
@@ -176,17 +175,17 @@
                 srcset="img/catalog-img-2-desktop.jpg 1x, img/catalog-img-2-desktop-2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/catalog-img-2-tablet.jpg 1x, img/catalog-img-2-tablet-2x.jpg 2x">
-              <img class="catalog__photo" src="img/catalog-img-2-mobile.jpg" srcset="img/catalog-img-2-mobile-2x.jpg 2x"
-                width="290" alt="фото номера эконом плюс класса">
+              <img src="img/catalog-img-2-mobile.jpg" srcset="img/catalog-img-2-mobile-2x.jpg 2x" width="290"
+                alt="фото номера эконом плюс класса">
             </picture>
           </a>
           <div class="catalog__description">
-            <a class="catalog__title">
-              <h3 class="catalog__title">Эконом плюс</h3>
+            <a>
+              <h3>Эконом плюс</h3>
             </a>
             <ul class="catalog__properties">
-              <li class="catalog__property">Размеры (ШхГхВ) - 90х100х180 см</li>
-              <li class="catalog__property">Площадь - 0,90 м2</li>
+              <li>Размеры (ШхГхВ) - 90х100х180 см</li>
+              <li>Площадь - 0,90 м2</li>
               <li class="catalog__property furniture">
                 Оснащение номера
                 <ul class="furniture__list">
@@ -194,14 +193,14 @@
                   <li class="furniture__item furniture__item--pole"></li>
                 </ul>
               </li>
-              <li class="catalog__property">Цена за сутки: <span class="catalog__price">200₽</span> </li>
+              <li>Цена за сутки: <span class="catalog__price">200₽</span> </li>
             </ul>
-            <button class="catalog__button button button--book button--orange">Забронировать</button>
+            <button class="button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
         <li class="catalog__item">
-          <a href="product.html" class="catalog__image-wrapper">
+          <a href="product.html">
             <picture>
               <source type="image/webp" media="(min-width: 1366px)"
                 srcset="img/catalog-img-3-desktop.webp 1x, img/catalog-img-3-desktop-2x.webp 2x">
@@ -213,17 +212,17 @@
                 srcset="img/catalog-img-3-desktop.jpg 1x, img/catalog-img-3-desktop-2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/catalog-img-3-tablet.jpg 1x, img/catalog-img-3-tablet-2x.jpg 2x">
-              <img class="catalog__photo" src="img/catalog-img-3-mobile.jpg" srcset="img/catalog-img-3-mobile-2x.jpg 2x"
-                width="290" alt="фото номера комфорт класса">
+              <img src="img/catalog-img-3-mobile.jpg" srcset="img/catalog-img-3-mobile-2x.jpg 2x" width="290"
+                alt="фото номера комфорт класса">
             </picture>
           </a>
           <div class="catalog__description">
-            <a class="catalog__title">
-              <h3 class="catalog__title">Комфорт</h3>
+            <a>
+              <h3>Комфорт</h3>
             </a>
             <ul class="catalog__properties">
-              <li class="catalog__property">Размеры (ШхГхВ) - 100х125х180 см</li>
-              <li class="catalog__property">Площадь - 1,13 м2</li>
+              <li>Размеры (ШхГхВ) - 100х125х180 см</li>
+              <li>Площадь - 1,13 м2</li>
               <li class="catalog__property furniture">
                 Оснащение номера
                 <ul class="furniture__list">
@@ -232,14 +231,14 @@
                   <li class="furniture__item furniture__item--ball"></li>
                 </ul>
               </li>
-              <li class="catalog__property">Цена за сутки: <span class="catalog__price">250₽</span> </li>
+              <li>Цена за сутки: <span class="catalog__price">250₽</span> </li>
             </ul>
-            <button class="catalog__button button button--book button--orange">Забронировать</button>
+            <button class="button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
         <li class="catalog__item">
-          <a href="product.html" class="catalog__image-wrapper">
+          <a href="product.html">
             <picture>
               <source type="image/webp" media="(min-width: 1366px)"
                 srcset="img/catalog-img-4-desktop.webp 1x, img/catalog-img-4-desktop-2x.webp 2x">
@@ -251,17 +250,17 @@
                 srcset="img/catalog-img-4-desktop.jpg 1x, img/catalog-img-4-desktop-2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/catalog-img-4-tablet.jpg 1x, img/catalog-img-4-tablet-2x.jpg 2x">
-              <img class="catalog__photo" src="img/catalog-img-4-mobile.jpg" srcset="img/catalog-img-4-mobile-2x.jpg 2x"
-                width="290" alt="фото номера сьют класса">
+              <img src="img/catalog-img-4-mobile.jpg" srcset="img/catalog-img-4-mobile-2x.jpg 2x" width="290"
+                alt="фото номера сьют класса">
             </picture>
           </a>
           <div class="catalog__description">
-            <a class="catalog__title">
-              <h3 class="catalog__title">Сьют</h3>
+            <a>
+              <h3>Сьют</h3>
             </a>
             <ul class="catalog__properties">
-              <li class="catalog__property">Размеры (ШхГхВ) - 125х125х180 см</li>
-              <li class="catalog__property">Площадь - 1,56 м2</li>
+              <li>Размеры (ШхГхВ) - 125х125х180 см</li>
+              <li>Площадь - 1,56 м2</li>
               <li class="catalog__property furniture">
                 Оснащение номера
                 <ul class="furniture__list">
@@ -270,14 +269,14 @@
                   <li class="furniture__item furniture__item--ball"></li>
                 </ul>
               </li>
-              <li class="catalog__property">Цена за сутки: <span class="catalog__price">350₽</span> </li>
+              <li>Цена за сутки: <span class="catalog__price">350₽</span> </li>
             </ul>
-            <button class="catalog__button button button--book button--orange">Забронировать</button>
+            <button class="button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
         <li class="catalog__item">
-          <a href="product.html" class="catalog__image-wrapper">
+          <a href="product.html">
             <picture>
               <source type="image/webp" media="(min-width: 1366px)"
                 srcset="img/catalog-img-5-desktop.webp 1x, img/catalog-img-5-desktop-2x.webp 2x">
@@ -289,17 +288,17 @@
                 srcset="img/catalog-img-5-desktop.jpg 1x, img/catalog-img-5-desktop-2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/catalog-img-5-tablet.jpg 1x, img/catalog-img-5-tablet-2x.jpg 2x">
-              <img class="catalog__photo" src="img/catalog-img-5-mobile.jpg" srcset="img/catalog-img-5-mobile-2x.jpg 2x"
-                width="290" alt="фото номера люкс класса">
+              <img src="img/catalog-img-5-mobile.jpg" srcset="img/catalog-img-5-mobile-2x.jpg 2x" width="290"
+                alt="фото номера люкс класса">
             </picture>
           </a>
           <div class="catalog__description">
-            <a class="catalog__title">
-              <h3 class="catalog__title">Люкс</h3>
+            <a>
+              <h3>Люкс</h3>
             </a>
             <ul class="catalog__properties">
-              <li class="catalog__property">Размеры (ШхГхВ) - 160х160х180 см</li>
-              <li class="catalog__property">Площадь - 2,56 м2</li>
+              <li>Размеры (ШхГхВ) - 160х160х180 см</li>
+              <li>Площадь - 2,56 м2</li>
               <li class="catalog__property furniture">
                 Оснащение номера
                 <ul class="furniture__list">
@@ -309,14 +308,14 @@
                   <li class="furniture__item furniture__item--house"></li>
                 </ul>
               </li>
-              <li class="catalog__property">Цена за сутки: <span class="catalog__price">500₽</span> </li>
+              <li>Цена за сутки: <span class="catalog__price">500₽</span> </li>
             </ul>
-            <button class="catalog__button button button--book button--orange">Забронировать</button>
+            <button class="button button--book button--orange">Забронировать</button>
           </div>
         </li>
 
         <li class="catalog__item">
-          <a href="product.html" class="catalog__image-wrapper">
+          <a href="product.html">
             <picture>
               <source type="image/webp" media="(min-width: 1366px)"
                 srcset="img/catalog-img-6-desktop.webp 1x, img/catalog-img-6-desktop-2x.webp 2x">
@@ -328,17 +327,17 @@
                 srcset="img/catalog-img-6-desktop.jpg 1x, img/catalog-img-6-desktop-2x.jpg 2x">
               <source media="(min-width: 768px)"
                 srcset="img/catalog-img-6-tablet.jpg 1x, img/catalog-img-6-tablet-2x.jpg 2x">
-              <img class="catalog__photo" src="img/catalog-img-6-mobile.jpg" srcset="img/catalog-img-6-mobile-2x.jpg 2x"
-                width="290" alt="фото номера супер-люкс класса">
+              <img src="img/catalog-img-6-mobile.jpg" srcset="img/catalog-img-6-mobile-2x.jpg 2x" width="290"
+                alt="фото номера супер-люкс класса">
             </picture>
           </a>
           <div class="catalog__description">
-            <a class="catalog__title" href="product.html">
+            <a href="product.html">
               <h3>Супер-Люкс</h3>
             </a>
             <ul class="catalog__properties">
-              <li class="catalog__property">Размеры (ШхГхВ) - 180х160х180 см</li>
-              <li class="catalog__property">Площадь - 2,88 м2</li>
+              <li>Размеры (ШхГхВ) - 180х160х180 см</li>
+              <li>Площадь - 2,88 м2</li>
               <li class="catalog__property furniture">
                 Оснащение номера
                 <ul class="furniture__list">
@@ -348,9 +347,9 @@
                   <li class="furniture__item furniture__item--house"></li>
                 </ul>
               </li>
-              <li class="catalog__property">Цена за сутки: <span class="catalog__price">600₽</span> </li>
+              <li>Цена за сутки: <span class="catalog__price">600₽</span> </li>
             </ul>
-            <button class="catalog__button button button--book button--orange">Забронировать</button>
+            <button class="button button--book button--orange">Забронировать</button>
           </div>
         </li>
       </ul>
@@ -470,11 +469,11 @@
   </section>
   <div class="success popup">
     <div class="success__inner">
-      <h2 class="success__title">Спасибо за заявку</h2>
-      <p class="success__text">
+      <h2>Спасибо за заявку</h2>
+      <p>
         Мы свяжемся с вами в ближайшее время
       </p>
-      <button class="success__button button button--orange">Ок</button>
+      <button class="button button--orange">Ок</button>
     </div>
   </div>
 

@@ -37,6 +37,7 @@ $(document).ready(function () {
     $('.success').click(onOverlayClickPopupClose);
   };
 
+  // TODO не работает на десктопе
   $('.button--book').click(function () {
     showPopup($('.booking'));
     document.addEventListener('keydown', onEscButtonPopupClose);

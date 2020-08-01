@@ -38,7 +38,7 @@ $(document).ready(function () {
   };
 
   // TODO не работает на десктопе
-  $('.button--book').click(function () {
+  $('.button--book').on('click', function () {
     showPopup($('.booking'));
     document.addEventListener('keydown', onEscButtonPopupClose);
     $('.booking').click(onOverlayClickPopupClose);
@@ -93,24 +93,15 @@ $(document).ready(function () {
   // suits
   $('.slider__list').slick({
     mobileFirst: true,
-    arrows: false,
     dots: true,
     appendDots: $('.slide-controls__indicators--suits'),
     dotsClass: 'slide-controls__list',
     customPaging: function () {
       return sliderDot;
     },
-    responsive: [
-      {
-        breakpoint: 1365,
-        settings: {
-          arrows: true,
-          appendArrows: $('.slide-controls__arrows--suits'),
-          prevArrow: previousArrow,
-          nextArrow: nextArrow,
-        }
-      }
-    ]
+    appendArrows: $('.slide-controls__arrows--suits'),
+    prevArrow: previousArrow,
+    nextArrow: nextArrow,
   });
 
   // feedback

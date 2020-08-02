@@ -7,8 +7,8 @@ import { showPopup } from './vendor.min.js';
 
 $(document).ready(function () {
   const sliderDot = '<button class="slide-controls__dot" type="button"></button>';
-  const previousArrow = '<button class="slide-controls__arrow slide-controls__arrow--left" tabindex="0"></button>';
-  const nextArrow = '<button class="slide-controls__arrow slide-controls__arrow--right" tabindex="0"></button>';
+  const previousArrow = '<button class="slide-controls__arrow slide-controls__arrow--left" tabindex="0">предыдущий слайд</button>';
+  const nextArrow = '<button class="slide-controls__arrow slide-controls__arrow--right" tabindex="0">следующий слайд</button>';
 
   const ESC_KEY = 'Escape';
 
@@ -37,7 +37,6 @@ $(document).ready(function () {
     $('.success').click(onOverlayClickPopupClose);
   };
 
-  // TODO не работает на десктопе
   $('.button--book').on('click', function () {
     showPopup($('.booking'));
     document.addEventListener('keydown', onEscButtonPopupClose);
@@ -127,4 +126,8 @@ $(document).ready(function () {
       }
     ]
   });
+
+  // lightcase
+
+  $('a[data-rel^=lightcase]').lightcase();
 });

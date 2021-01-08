@@ -34,6 +34,7 @@
 .sorting__toggler {
   position: relative;
   padding-right: 35px;
+  cursor: pointer;
 
   &::after {
     content: "";

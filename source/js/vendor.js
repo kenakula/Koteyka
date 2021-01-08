@@ -15781,18 +15781,41 @@ export const toggleMenu = function () {
   $('.page-header').toggleClass('page-header--expanded');
   $('.main-nav__menu').toggleClass('main-nav__menu--active');
   $('.toggler').toggleClass('toggler--active');
+  $(document.body).toggleClass('scroll-lock');
 };
 
 export const closeMenu = function () {
   $('.page-header').removeClass('page-header--expanded');
   $('.main-nav__menu').removeClass('main-nav__menu--active');
   $('.toggler').removeClass('toggler--active');
+  $(document.body).removeClass('scroll-lock');
 }
 
 export const closePopup = function () {
   $('.popup--show').toggleClass('popup--show');
+  scrollEnable();
 };
 
 export const showPopup = function (popup) {
   popup.addClass('popup--show');
+  scrollDisable();
+};
+
+const $body = document.querySelector('body');
+let scrollPosition = 0;
+
+export const scrollDisable = function () {
+  scrollPosition = window.pageYOffset;
+  $body.style.overflow = 'hidden';
+  $body.style.position = 'fixed';
+  $body.style.top = `-${scrollPosition}px`;
+  $body.style.width = '100%';
+};
+
+export const scrollEnable = function () {
+  $body.style.removeProperty('overflow');
+  $body.style.removeProperty('position');
+  $body.style.removeProperty('top');
+  $body.style.removeProperty('width');
+  window.scrollTo(0, scrollPosition);
 };

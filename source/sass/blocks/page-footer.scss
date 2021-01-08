@@ -5,6 +5,11 @@
 .page-footer__logo {
   display: block;
   margin-bottom: 20px;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .page-footer__menu {

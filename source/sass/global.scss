@@ -39,3 +39,9 @@ body {
 img {
   max-width: 100%;
 }
+
+.scroll-lock {
+  width: 100%;
+  position: fixed;
+  overflow-y: hidden;
+}

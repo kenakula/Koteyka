@@ -1,11 +1,11 @@
 /* eslint object-curly-spacing: ["error", "always"] */
 
-import { toggleMenu } from './vendor.min.js';
-import { closeMenu } from './vendor.min.js';
-import { closePopup } from './vendor.min.js';
-import { showPopup } from './vendor.min.js';
+import { toggleMenu, closeMenu, closePopup, showPopup, scrollEnable, scrollDisable } from './vendor.min.js';
+// import { closeMenu } from './vendor.min.js';
+// import { closePopup } from './vendor.min.js';
+// import { showPopup } from './vendor.min.js';
 
-$(document).ready(function () {
+$(function () {
   const sliderDot = '<button class="slide-controls__dot" type="button"></button>';
   const previousArrow = '<button class="slide-controls__arrow slide-controls__arrow--left" tabindex="0">предыдущий слайд</button>';
   const nextArrow = '<button class="slide-controls__arrow slide-controls__arrow--right" tabindex="0">следующий слайд</button>';
@@ -19,6 +19,7 @@ $(document).ready(function () {
   const onEscButtonPopupClose = function (evt) {
     if (evt.key === ESC_KEY) {
       closePopup();
+      scrollEnable();
       document.removeEventListener('keydown', onEscButtonPopupClose);
     }
   };
@@ -26,6 +27,7 @@ $(document).ready(function () {
   const onOverlayClickPopupClose = function (evt) {
     if (evt.target.classList.contains('popup--show')) {
       evt.target.classList.remove('popup--show');
+      scrollEnable();
     }
   };
 
@@ -34,31 +36,31 @@ $(document).ready(function () {
     evt.target.reset();
     closePopup();
     showPopup($('.success'));
-    $('.success').click(onOverlayClickPopupClose);
+    $('.success').on('click', onOverlayClickPopupClose);
   };
 
   $('.button--book').on('click', function () {
     showPopup($('.booking'));
     document.addEventListener('keydown', onEscButtonPopupClose);
-    $('.booking').click(onOverlayClickPopupClose);
+    $('.booking').on('click', onOverlayClickPopupClose);
   });
 
-  $('.popup__close').click(function () {
+  $('.popup__close').on('click', function () {
     closePopup();
     document.removeEventListener('keydown', onEscButtonPopupClose);
   });
 
-  $('.success__button').click(function () {
+  $('.success button').on('click', function () {
     closePopup();
     document.removeEventListener('keydown', onEscButtonPopupClose);
   });
 
-  $('.booking__form').submit(onFormSubmitPopupClose);
+  $('.booking__form').on('submit', onFormSubmitPopupClose);
 
-  $('.filter__toggler').click(function () {
+  $('.filter__toggler').on('click', function () {
     showPopup($('.filter'));
     document.addEventListener('keydown', onEscButtonPopupClose);
-    $('.filter').click(onOverlayClickPopupClose);
+    $('.filter').on('click', onOverlayClickPopupClose);
   });
 
   // окошко сортировки
@@ -74,19 +76,19 @@ $(document).ready(function () {
     }
   };
 
-  $('.sorting__toggler').click(function () {
+  $('.sorting__toggler').on('click', function () {
     toggleSortingPopup();
     document.addEventListener('keydown', onEscButtonSortingListClose);
   });
 
-  $('.sorting__list').click(function () {
+  $('.sorting__list').on('click', function () {
     toggleSortingPopup();
     document.removeEventListener('keydown', onEscButtonSortingListClose);
   });
 
   // ------------------------------------------ menu
-  $('.toggler').click(toggleMenu);
-  $('.main-nav a').click(closeMenu);
+  $('.toggler').on('click', toggleMenu);
+  $('.main-nav a').on('click', closeMenu);
 
   // ------------------------------------------ sliders
   // suits

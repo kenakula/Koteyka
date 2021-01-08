@@ -11,6 +11,14 @@
   }
 }
 
+.page-header__logo[href] {
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 @media (min-width: $tablet) {
   .page-header {
     min-height: 76px;

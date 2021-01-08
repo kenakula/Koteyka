@@ -76,8 +76,8 @@
         <fieldset>
           <legend>Цена за сутки, ₽</legend>
           <div class="filter__inner">
-            <input id="min-price" type="text" placeholder="от 100">
-            <input id="max-price" type="text" placeholder="до 600">
+            <input id="min-price" type="number" min="100" placeholder="от 100">
+            <input id="max-price" type="number" max="600" placeholder="до 600">
           </div>
         </fieldset>
         <fieldset>
@@ -144,9 +144,7 @@
             </picture>
           </a>
           <div class="catalog__description">
-            <a>
-              <h3>Эконом</h3>
-            </a>
+            <h3><a href="product.html">Эконом</a></h3>
             <ul class="catalog__properties">
               <li>Размеры (ШхГхВ) - 90х70х180 см</li>
               <li>Площадь - 0,63 м2</li>
@@ -180,9 +178,7 @@
             </picture>
           </a>
           <div class="catalog__description">
-            <a>
-              <h3>Эконом плюс</h3>
-            </a>
+            <h3><a href="product.html">Эконом плюс</a></h3>
             <ul class="catalog__properties">
               <li>Размеры (ШхГхВ) - 90х100х180 см</li>
               <li>Площадь - 0,90 м2</li>
@@ -217,9 +213,7 @@
             </picture>
           </a>
           <div class="catalog__description">
-            <a>
-              <h3>Комфорт</h3>
-            </a>
+            <h3><a href="product.html">Комфорт</a></h3>
             <ul class="catalog__properties">
               <li>Размеры (ШхГхВ) - 100х125х180 см</li>
               <li>Площадь - 1,13 м2</li>
@@ -255,9 +249,7 @@
             </picture>
           </a>
           <div class="catalog__description">
-            <a>
-              <h3>Сьют</h3>
-            </a>
+            <h3><a href="product.html">Сьют</a></h3>
             <ul class="catalog__properties">
               <li>Размеры (ШхГхВ) - 125х125х180 см</li>
               <li>Площадь - 1,56 м2</li>
@@ -293,9 +285,7 @@
             </picture>
           </a>
           <div class="catalog__description">
-            <a>
-              <h3>Люкс</h3>
-            </a>
+            <h3><a href="product.html">Люкс</a></h3>
             <ul class="catalog__properties">
               <li>Размеры (ШхГхВ) - 160х160х180 см</li>
               <li>Площадь - 2,56 м2</li>
@@ -332,9 +322,7 @@
             </picture>
           </a>
           <div class="catalog__description">
-            <a href="product.html">
-              <h3>Супер-Люкс</h3>
-            </a>
+            <h3><a href="product.html">Супер-люкс</a></h3>
             <ul class="catalog__properties">
               <li>Размеры (ШхГхВ) - 180х160х180 см</li>
               <li>Площадь - 2,88 м2</li>
@@ -464,7 +452,7 @@
           <input id="checkout" type="text" placeholder="26.02.2020">
         </div>
       </div>
-      <button class="button button--orange">Отправить заявку</button>
+      <button class="button button--orange" type="submit">Отправить заявку</button>
     </form>
   </section>
   <div class="success popup">

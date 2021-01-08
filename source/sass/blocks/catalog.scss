@@ -15,8 +15,15 @@
   }
 
   > a {
-    min-height: 185px;
+    display: block;
+    width: 100%;
     text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   img {
@@ -45,6 +52,16 @@
 
   button {
     margin: 0 auto;
+  }
+
+  a {
+    color: $text-black;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 

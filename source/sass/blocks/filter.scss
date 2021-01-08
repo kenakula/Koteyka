@@ -41,17 +41,19 @@
     line-height: 19px;
   }
 
-  input[type="text"] {
+  input[type="number"] {
     padding: 0 10px;
     width: 99px;
     height: 36px;
     border: 1px solid $grey;
+    cursor: pointer;
   }
 
   label {
     position: relative;
     margin-bottom: 25px;
     padding-left: 35px;
+    cursor: pointer;
 
     &:last-child {
       margin-bottom: 0;
@@ -82,7 +84,7 @@
     }
   }
 
-  button {
+  button:not(.popup__close) {
     @include button-reset;
 
     margin: 0 auto 25px;
@@ -93,6 +95,8 @@
     font-size: 14px;
     line-height: 17px;
     background-color: $yellow;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
 
     &::after {
       display: none;
@@ -110,7 +114,7 @@
       opacity: 0.5;
     }
 
-    &[type="button"] {
+    &[type="button"]:not(.popup__close) {
       height: 45px;
       background-color: $white;
       border: 3px solid $yellow;
@@ -133,7 +137,7 @@ input[type="checkbox"]:checked + label::after {
     padding-left: 60px;
     padding-right: 60px;
 
-    button {
+    button:not(.popup__close) {
       width: 100%;
     }
   }

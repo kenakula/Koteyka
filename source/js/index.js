@@ -19,6 +19,7 @@ $(document).ready(function () {
   const onEscButtonPopupClose = function (evt) {
     if (evt.key === ESC_KEY) {
       closePopup();
+      $(document.body).removeClass('scroll-lock');
       document.removeEventListener('keydown', onEscButtonPopupClose);
     }
   };
@@ -26,6 +27,7 @@ $(document).ready(function () {
   const onOverlayClickPopupClose = function (evt) {
     if (evt.target.classList.contains('popup--show')) {
       evt.target.classList.remove('popup--show');
+      $(document.body).removeClass('scroll-lock');
     }
   };
 
@@ -33,23 +35,27 @@ $(document).ready(function () {
     evt.preventDefault();
     evt.target.reset();
     closePopup();
+    $(document.body).removeClass('scroll-lock');
     showPopup($('.success'));
     $('.success').click(onOverlayClickPopupClose);
   };
 
   $('.button--book').on('click', function () {
     showPopup($('.booking'));
+    $(document.body).addClass('scroll-lock');
     document.addEventListener('keydown', onEscButtonPopupClose);
     $('.booking').click(onOverlayClickPopupClose);
   });
 
   $('.popup__close').click(function () {
     closePopup();
+    $(document.body).removeClass('scroll-lock');
     document.removeEventListener('keydown', onEscButtonPopupClose);
   });
 
   $('.success__button').click(function () {
     closePopup();
+    $(document.body).removeClass('scroll-lock');
     document.removeEventListener('keydown', onEscButtonPopupClose);
   });
 

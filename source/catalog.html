@@ -58,13 +58,17 @@
     <div class="inner-page__inner">
       <button class="inner-page__button filter__toggler">Фильтры</button>
       <div class="inner-page__sorting sorting">
+        <input type="radio" class="visually-hidden" checked name="sorting" data-sorting="square" data-sorting-order="asc" id="sorting_1">
+        <input type="radio" class="visually-hidden" name="sorting" data-sorting="square" data-sorting-order="desc" id="sorting_2">
+        <input type="radio" class="visually-hidden" name="sorting" data-sorting="price" data-sorting-order="asc" id="sorting_3">
+        <input type="radio" class="visually-hidden" name="sorting" data-sorting="price" data-sorting-order="desc" id="sorting_4">
         <button class="inner-page__button sorting__toggler">↑ По площади</button>
         <div class="sorting">
           <ul class="sorting__list">
-            <li class="sorting__item sorting__item--ascending">↑ По площади</li>
-            <li class="sorting__item sorting__item--descending">↓ По площади</li>
-            <li class="sorting__item sorting__item--ascending">↑ По цене</li>
-            <li class="sorting__item sorting__item--descending">↓ По цене</li>
+            <li class="sorting__item sorting__item--ascending" data-input="1">↑ По площади</li>
+            <li class="sorting__item sorting__item--descending" data-input="2">↓ По площади</li>
+            <li class="sorting__item sorting__item--ascending" data-input="3">↑ По цене</li>
+            <li class="sorting__item sorting__item--descending" data-input="4">↓ По цене</li>
           </ul>
         </div>
       </div>

@@ -13,6 +13,7 @@
   font-size: 14px;
   line-height: 17px;
   background-color: $white;
+  overflow: hidden;
 
   &--show {
     display: block;
@@ -27,14 +28,18 @@
   cursor: pointer;
 
   &:hover {
-    outline: 2px solid $yellow;
+    // outline: 2px solid $yellow;
+    background-color: $feedback-grey;
+    color: #fff;
   }
 }
 
 .sorting__toggler {
   position: relative;
   padding-right: 35px;
+  min-width: 150px;
   cursor: pointer;
+  outline: none;
 
   &::after {
     content: "";

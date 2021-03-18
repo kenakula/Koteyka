@@ -132,4 +132,22 @@ $(function () {
   // lightcase
 
   $('a[data-rel^=lightcase]').lightcase();
+
+  // pagescroll
+  const manageScrollClass = () => {
+    let pageScroll = $(document).scrollTop();
+    if (pageScroll > 0) {
+      $(document.body).addClass('is-scrolled');
+    } else {
+      $(document.body).removeClass('is-scrolled');
+    }
+  };
+
+  $(document).scroll(function () {
+    manageScrollClass();
+  });
+
+  $(document).ready(function () {
+    manageScrollClass();
+  });
 });

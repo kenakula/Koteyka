@@ -65,24 +65,40 @@ $(function () {
 
   // окошко сортировки
 
-  const toggleSortingPopup = function () {
-    $('.sorting__list').toggleClass('sorting__list--show');
+  const selectSortingItem = function (evt) {
+    const sortingContainer = document.querySelector('.sorting');
+    const target = evt.target.closest('.sorting__item');
+    const targetValue = target.textContent;
+    const targetInputId = target.dataset.input;
+    const targetInput = sortingContainer.querySelector(`#sorting_${targetInputId}`);
+
+    $('.sorting__toggler').text(targetValue);
+    targetInput.checked = true;
+  };
+
+  const closeSortingPopup = function () {
+    $('.sorting__list').removeClass('sorting__list--show');
+  };
+
+  const openSortiongPopup = function () {
+    $('.sorting__list').addClass('sorting__list--show');
   };
 
   const onEscButtonSortingListClose = function (evt) {
     if (evt.key === ESC_KEY) {
-      toggleSortingPopup();
+      closeSortingPopup();
       document.removeEventListener('keydown', onEscButtonSortingListClose);
     }
   };
 
   $('.sorting__toggler').on('click', function () {
-    toggleSortingPopup();
+    openSortiongPopup();
     document.addEventListener('keydown', onEscButtonSortingListClose);
   });
 
-  $('.sorting__list').on('click', function () {
-    toggleSortingPopup();
+  $('.sorting__list').on('click', function (evt) {
+    closeSortingPopup();
+    selectSortingItem(evt);
     document.removeEventListener('keydown', onEscButtonSortingListClose);
   });
 
@@ -132,4 +148,22 @@ $(function () {
   // lightcase
 
   $('a[data-rel^=lightcase]').lightcase();
+
+  // pagescroll
+  const manageScrollClass = () => {
+    let pageScroll = $(document).scrollTop();
+    if (pageScroll > 0) {
+      $(document.body).addClass('is-scrolled');
+    } else {
+      $(document.body).removeClass('is-scrolled');
+    }
+  };
+
+  $(document).scroll(function () {
+    manageScrollClass();
+  });
+
+  $(document).ready(function () {
+    manageScrollClass();
+  });
 });

@@ -15777,19 +15777,32 @@
   };
 })(jQuery);
 
-export const toggleMenu = function () {
-  $('.page-header').toggleClass('page-header--expanded');
-  $('.main-nav__menu').toggleClass('main-nav__menu--active');
-  $('.toggler').toggleClass('toggler--active');
-  $(document.body).toggleClass('scroll-lock');
+const openMenu = () => {
+  $('.page-header').addClass('page-header--expanded');
+  $('.main-nav__menu').addClass('main-nav__menu--active');
+  $('.toggler').addClass('toggler--active');
+  $(document.body).addClass('scroll-lock');
 };
 
-export const closeMenu = function () {
+export const closeMenu = () => {
   $('.page-header').removeClass('page-header--expanded');
   $('.main-nav__menu').removeClass('main-nav__menu--active');
   $('.toggler').removeClass('toggler--active');
   $(document.body).removeClass('scroll-lock');
 }
+
+window.scrollPosition = 0;
+
+export const toggleMenu = function () {
+  if (!$('.page-header').hasClass('page-header--expanded')) {
+    window.scrollPosition = $(document).scrollTop();
+    console.log('scrollPosition:', window.scrollPosition)
+    openMenu();
+  } else {
+    closeMenu();
+    $(document).scrollTop(window.scrollPosition);
+  }
+};
 
 export const closePopup = function () {
   $('.popup--show').toggleClass('popup--show');
